@@ -3,27 +3,30 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: nexa;
+  font-family: poppins;
 }
 
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  position: relative;
 }
 
 main > .logo-img {
   background: url("./halie-west-25xggax4bSA-unsplash.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-attachment: fixed;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   position: relative;
+  top: 0;
 }
 
 main > .logo-img > div {
-  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
   background: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,6 +67,7 @@ main > form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 50px 0;
 }
 
 main > form .text {
@@ -72,7 +76,7 @@ main > form .text {
 
 main > form .text p {
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 main > form .text p:last-child {
@@ -147,6 +151,7 @@ main > form > div.forms > .inputs > .row > div > input:focus {
 main > form > div.forms > .inputs > .row > div > input + i {
   color: red;
   display: inline-block;
+  font-size: .8rem;
   padding: 5px 0;
 }
 
@@ -182,5 +187,534 @@ main > form > button + p > a {
   color: #596D48;
   text-decoration: none;
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  main > .logo-img {
+    background: url("./halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+    top: 0;
+  }
+  main > .logo-img > div {
+    position: -webkit-sticky;
+    position: sticky;
+    background: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: -100px;
+    top: 100px;
+    width: 100%;
+    padding: 10px;
+  }
+  main > .logo-img > div > span > img {
+    width: 70px;
+  }
+  main > .logo-img > div > h1 {
+    font-family: Norse;
+    font-size: 4.3rem;
+    color: #fff;
+    margin: 0;
+  }
+  main > form {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+    background: #e3e3e3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 50px 0;
+  }
+  main > form .text {
+    padding: 20px;
+  }
+  main > form .text p {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  main > form .text p:last-child {
+    margin-top: 20px;
+  }
+  main > form > div.forms {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px #464646;
+            box-shadow: 0 1px 2px #464646;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  main > form > div.forms h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  main > form > div.forms > .inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main > form > div.forms > .inputs > .row {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main > form > div.forms > .inputs > .row > div * {
+    display: block;
+  }
+  main > form > div.forms > .inputs > .row > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-bottom: 20px;
+  }
+  main > form > div.forms > .inputs > .row > div > label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .7rem;
+  }
+  main > form > div.forms > .inputs > .row > div > input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 80%;
+    border: 2px solid #e5e7eb;
+    outline: none;
+  }
+  main > form > div.forms > .inputs > .row > div > input:focus {
+    -webkit-box-shadow: 0px 0px 5px blue;
+            box-shadow: 0px 0px 5px blue;
+    border: 1px solid blue;
+  }
+  main > form > div.forms > .inputs > .row > div > input + i {
+    color: red;
+    display: inline-block;
+    font-size: .6rem;
+    padding: 5px 0;
+  }
+  main > form > div.forms > .inputs > .row > div > input:valid + i {
+    opacity: 0;
+  }
+  main > form > div.forms > .inputs > .row > div > input:invalid + i {
+    opacity: 1;
+  }
+  main > form > div.forms > .inputs > .row > div > input:invalid {
+    border: 1px solid red;
+  }
+  main > form > button {
+    margin: 20px;
+    display: inline-block;
+    padding: 10px 25px;
+    width: 200px;
+    background: #596D48;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+  }
+  main > form > button + p {
+    margin: 20px;
+  }
+  main > form > button + p > a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main > .logo-img {
+    background: url("./halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+    top: 0;
+  }
+  main > .logo-img > div {
+    position: -webkit-sticky;
+    position: sticky;
+    background: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: -100px;
+    top: 100px;
+    width: 100%;
+    padding: 10px;
+    margin: 30px 0;
+  }
+  main > .logo-img > div > span > img {
+    width: 70px;
+  }
+  main > .logo-img > div > h1 {
+    font-family: Norse;
+    font-size: 4.3rem;
+    color: #fff;
+    margin: 0;
+  }
+  main > form {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+    background: #e3e3e3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 0;
+  }
+  main > form .text {
+    padding: 20px;
+  }
+  main > form .text p {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  main > form .text p:last-child {
+    margin-top: 20px;
+  }
+  main > form > div.forms {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px #464646;
+            box-shadow: 0 1px 2px #464646;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  main > form > div.forms h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  main > form > div.forms > .inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main > form > div.forms > .inputs > .row {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+  }
+  main > form > div.forms > .inputs > .row > div * {
+    display: block;
+  }
+  main > form > div.forms > .inputs > .row > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0 auto 20px auto;
+  }
+  main > form > div.forms > .inputs > .row > div > label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .7rem;
+    margin-bottom: 5px;
+  }
+  main > form > div.forms > .inputs > .row > div > input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    border: 2px solid #e5e7eb;
+    outline: none;
+  }
+  main > form > div.forms > .inputs > .row > div > input:focus {
+    -webkit-box-shadow: 0px 0px 5px blue;
+            box-shadow: 0px 0px 5px blue;
+    border: 1px solid blue;
+  }
+  main > form > div.forms > .inputs > .row > div > input + i {
+    color: red;
+    display: inline-block;
+    font-size: .6rem;
+    padding: 5px 0;
+  }
+  main > form > div.forms > .inputs > .row > div > input:valid + i {
+    opacity: 0;
+  }
+  main > form > div.forms > .inputs > .row > div > input:invalid + i {
+    opacity: 1;
+  }
+  main > form > div.forms > .inputs > .row > div > input:invalid {
+    border: 1px solid red;
+  }
+  main > form > button {
+    margin: 20px;
+    display: inline-block;
+    padding: 10px 25px;
+    width: 200px;
+    background: #596D48;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+  }
+  main > form > button + p {
+    margin: 20px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  main > form > button + p > a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main > .logo-img {
+    background: url("./halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+    top: 0;
+  }
+  main > .logo-img > div {
+    position: -webkit-sticky;
+    position: sticky;
+    background: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: -100px;
+    top: 100px;
+    width: 100%;
+    padding: 10px;
+    margin: 30px 0;
+  }
+  main > .logo-img > div > span > img {
+    width: 70px;
+  }
+  main > .logo-img > div > h1 {
+    font-family: Norse;
+    font-size: 4.3rem;
+    color: #fff;
+    margin: 0;
+  }
+  main > form {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+    background: #e3e3e3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 0;
+  }
+  main > form .text {
+    padding: 20px;
+  }
+  main > form .text p {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  main > form .text p:last-child {
+    margin-top: 20px;
+  }
+  main > form > div.forms {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 2px #464646;
+            box-shadow: 0 1px 2px #464646;
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+  }
+  main > form > div.forms h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  main > form > div.forms > .inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main > form > div.forms > .inputs > .row {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  main > form > div.forms > .inputs > .row > div * {
+    display: block;
+  }
+  main > form > div.forms > .inputs > .row > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0 auto 20px auto;
+  }
+  main > form > div.forms > .inputs > .row > div > label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .7rem;
+    margin-bottom: 5px;
+  }
+  main > form > div.forms > .inputs > .row > div > input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    border: 2px solid #e5e7eb;
+    outline: none;
+  }
+  main > form > div.forms > .inputs > .row > div > input:focus {
+    -webkit-box-shadow: 0px 0px 5px blue;
+            box-shadow: 0px 0px 5px blue;
+    border: 1px solid blue;
+  }
+  main > form > div.forms > .inputs > .row > div > input + i {
+    color: red;
+    display: inline-block;
+    font-size: .5rem;
+    padding: 5px 0;
+  }
+  main > form > div.forms > .inputs > .row > div > input:valid + i {
+    opacity: 0;
+  }
+  main > form > div.forms > .inputs > .row > div > input:invalid + i {
+    opacity: 1;
+  }
+  main > form > div.forms > .inputs > .row > div > input:invalid {
+    border: 1px solid red;
+  }
+  main > form > button {
+    margin: 20px;
+    display: inline-block;
+    padding: 10px 25px;
+    width: 200px;
+    background: #596D48;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+  }
+  main > form > button + p {
+    margin: 20px;
+    font-size: .8rem;
+    text-align: center;
+  }
+  main > form > button + p > a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 600;
+  }
 }
 /*# sourceMappingURL=app.css.map */

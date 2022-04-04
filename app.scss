@@ -2,24 +2,30 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: nexa;
+    font-family: poppins;
+}
+body{
+    // height: 100vh;
 }
 main {
     display: flex;
-    height: 100vh;
+    position: relative;
     
     > .logo-img {
+
         background: url('./halie-west-25xggax4bSA-unsplash.jpg');
-        background-size: cover;
+        background-size: contain;
+        background-attachment: fixed;
         flex: 1;
         position: relative;
+        top: 0;
 
         > div * {
             // display: inline-block;
         }
 
         > div {
-            position: absolute;
+            position: sticky;
             background: rgba(0,0,0,.7);
             display: flex;
             justify-content: center;
@@ -49,13 +55,14 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 50px 0;
 
         .text {
             padding: 25px;
 
             p {
                 font-weight: 700;
-                font-size: 1.3rem;
+                font-size: 1.1rem;
                 
                 &:last-child {
                     margin-top: 25px;
@@ -111,6 +118,7 @@ main {
                             + i {
                                 color: red;
                                 display: inline-block;
+                                font-size: .8rem;
                                 padding: 5px 0;
                             }
 
@@ -153,5 +161,510 @@ main {
         }
 
 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        position: relative;
+        
+        > .logo-img {
+    
+            background: url('./halie-west-25xggax4bSA-unsplash.jpg');
+            background-size: contain;
+            background-attachment: fixed;
+            flex: 1;
+            position: relative;
+            top: 0;
+    
+            > div * {
+                // display: inline-block;
+            }
+    
+            > div {
+                position: sticky;
+                background: rgba(0,0,0,.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: -100px;
+                top: 100px;
+                width: 100%;
+                padding: 10px;
+            }
+    
+            > div > span > img {
+                width:70px;
+            }
+    
+            > div > h1 {
+                font-family: Norse;
+                font-size: 4.3rem;
+                color: #fff;
+                margin: 0;
+            }
+    
+    
+        }
+    
+        > form {
+            flex: 1.5;
+            background: #e3e3e3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px 0;
+    
+            .text {
+                padding: 20px;
+    
+                p {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    
+                    &:last-child {
+                        margin-top: 20px;
+                    }
+                }
+            }
+    
+            > div.forms {
+                background: #fff;
+                box-shadow: 0 1px 2px rgb(70, 70, 70);
+                margin: 20px 0;
+                padding: 20px;
+    
+                h2 {
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+    
+                > .inputs {
+                    display: flex;
+                    flex-direction: column;
+    
+                    > .row {
+                        flex: 1;
+                        display: flex;
+                        justify-content: flex-start;
+    
+                        > div *{
+                            display: block;
+                        }
+    
+                        > div {
+                            flex: 1;
+                            margin-bottom: 20px;
+    
+                            > label {
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                font-size: .7rem;
+                            }
+    
+                            > input {
+                                border-radius: 5px;
+                                padding: 5px;
+                                width: 80%;
+                                border: 2px solid #e5e7eb;
+                                outline: none;
+                                
+                                &:focus {
+                                    box-shadow: 0px 0px 5px blue;
+                                    border: 1px solid blue;
+                                }
+    
+                                + i {
+                                    color: red;
+                                    display: inline-block;
+                                    font-size: .6rem;
+                                    padding: 5px 0;
+                                }
+    
+                                &:valid + i{
+                                    opacity: 0;
+                                }
+    
+                                &:invalid + i {
+                                    opacity: 1;
+                                }
+                                &:invalid {
+                                    border: 1px solid red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            > button {
+                margin: 20px;
+                display: inline-block;
+                padding: 10px 25px;
+                width: 200px;
+                background: #596D48;
+                color: #fff;
+                font-weight: 500;
+                border-radius: 10px;
+                border: none;
+    
+                +p {
+                    margin: 20px;
+                    > a {
+                        color: #596D48;
+                        text-decoration: none;
+                        font-weight: 600;
+    
+                    }
+                }
+            }
+    
+    
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    main {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        
+        > .logo-img {
+    
+            background: url('./halie-west-25xggax4bSA-unsplash.jpg');
+            background-size: contain;
+            background-attachment: fixed;
+            flex: 1;
+            position: relative;
+            top: 0;
+    
+            > div * {
+                // display: inline-block;
+            }
+    
+            > div {
+                position: sticky;
+                background: rgba(0,0,0,.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: -100px;
+                top: 100px;
+                width: 100%;
+                padding: 10px;
+                margin: 30px 0;
+            }
+    
+            > div > span > img {
+                width:70px;
+            }
+    
+            > div > h1 {
+                font-family: Norse;
+                font-size: 4.3rem;
+                color: #fff;
+                margin: 0;
+            }
+    
+    
+        }
+    
+        > form {
+            flex: 1.5;
+            background: #e3e3e3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+    
+            .text {
+                padding: 20px;
+    
+                p {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    
+                    &:last-child {
+                        margin-top: 20px;
+                    }
+                }
+            }
+    
+            > div.forms {
+                background: #fff;
+                box-shadow: 0 1px 2px rgb(70, 70, 70);
+                margin: 20px 0;
+                padding: 20px;
+    
+                h2 {
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+    
+                > .inputs {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    > .row {
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        // align-items: center;
+                        gap: 10px;
+    
+                        > div *{
+                            display: block;
+                        }
+    
+                        > div {
+                            flex: 1;
+                            // margin-bottom: 20px;
+                            margin: 0 auto 20px auto;
+    
+                            > label {
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                font-size: .7rem;
+                                margin-bottom: 5px;
+                            }
+    
+                            > input {
+                                border-radius: 5px;
+                                padding: 5px;
+                                width: 100%;
+                                border: 2px solid #e5e7eb;
+                                outline: none;
+                                
+                                &:focus {
+                                    box-shadow: 0px 0px 5px blue;
+                                    border: 1px solid blue;
+                                }
+    
+                                + i {
+                                    color: red;
+                                    display: inline-block;
+                                    font-size: .6rem;
+                                    padding: 5px 0;
+                                }
+    
+                                &:valid + i{
+                                    opacity: 0;
+                                }
+    
+                                &:invalid + i {
+                                    opacity: 1;
+                                }
+                                &:invalid {
+                                    border: 1px solid red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            > button {
+                margin: 20px;
+                display: inline-block;
+                padding: 10px 25px;
+                width: 200px;
+                background: #596D48;
+                color: #fff;
+                font-weight: 500;
+                border-radius: 10px;
+                border: none;
+    
+                +p {
+                    margin: 20px;
+                    text-align: center;
+                    font-size: 1rem;
+                    > a {
+                        color: #596D48;
+                        text-decoration: none;
+                        font-weight: 600;
+    
+                    }
+                }
+            }
+    
+    
+        }
+    }
+}
+@media screen and (max-width: 320px) {
+    main {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        
+        > .logo-img {
+    
+            background: url('./halie-west-25xggax4bSA-unsplash.jpg');
+            background-size: contain;
+            background-attachment: fixed;
+            flex: 1;
+            position: relative;
+            top: 0;
+    
+            > div * {
+                // display: inline-block;
+            }
+    
+            > div {
+                position: sticky;
+                background: rgba(0,0,0,.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: -100px;
+                top: 100px;
+                width: 100%;
+                padding: 10px;
+                margin: 30px 0;
+            }
+    
+            > div > span > img {
+                width:70px;
+            }
+    
+            > div > h1 {
+                font-family: Norse;
+                font-size: 4.3rem;
+                color: #fff;
+                margin: 0;
+            }
+    
+    
+        }
+    
+        > form {
+            flex: 1.5;
+            background: #e3e3e3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+    
+            .text {
+                padding: 20px;
+    
+                p {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    
+                    &:last-child {
+                        margin-top: 20px;
+                    }
+                }
+            }
+    
+            > div.forms {
+                background: #fff;
+                box-shadow: 0 1px 2px rgb(70, 70, 70);
+                margin: 20px 0;
+                padding: 20px;
+                width: 100%;
+    
+                h2 {
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+    
+                > .inputs {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    > .row {
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        // align-items: center;
+                        gap: 10px;
+    
+                        > div *{
+                            display: block;
+                        }
+    
+                        > div {
+                            flex: 1;
+                            // margin-bottom: 20px;
+                            margin: 0 auto 20px auto;
+    
+                            > label {
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                font-size: .7rem;
+                                margin-bottom: 5px;
+                            }
+    
+                            > input {
+                                border-radius: 5px;
+                                padding: 5px;
+                                width: 100%;
+                                border: 2px solid #e5e7eb;
+                                outline: none;
+                                
+                                &:focus {
+                                    box-shadow: 0px 0px 5px blue;
+                                    border: 1px solid blue;
+                                }
+    
+                                + i {
+                                    color: red;
+                                    display: inline-block;
+                                    font-size: .5rem;
+                                    padding: 5px 0;
+                                }
+    
+                                &:valid + i{
+                                    opacity: 0;
+                                }
+    
+                                &:invalid + i {
+                                    opacity: 1;
+                                }
+                                &:invalid {
+                                    border: 1px solid red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            > button {
+                margin: 20px;
+                display: inline-block;
+                padding: 10px 25px;
+                width: 200px;
+                background: #596D48;
+                color: #fff;
+                font-weight: 500;
+                border-radius: 10px;
+                border: none;
+    
+                +p {
+                    margin: 20px;
+                    font-size: .8rem;
+                    text-align: center;
+                    > a {
+                        color: #596D48;
+                        text-decoration: none;
+                        font-weight: 600;
+    
+                    }
+                }
+            }
+    
+    
+        }
     }
 }
